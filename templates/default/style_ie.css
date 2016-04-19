@@ -1,0 +1,60 @@
+/*
+* 12/12/2005 - 22:40:00 - Scout Web Portail - v 1.1.1
+*
+* style_ie.css v 1.1 - Styles spécifiques à Internet Explorer
+* Copyright (C) 2005 ChMat
+* http://www.scoutwebportail.org
+*
+* This file is part of Scout Web Portail.
+*/
+/* 
+* Ce fichier de styles permet de pallier aux différences de prise en charge des styles CSS
+* entre IE et les navigateurs qui respectent les standards 
+*/
+#menu a {display:inline; width:100%;}
+
+#corps { /* IE considère que les bordures sont à l'extérieur d'un block, il faut donc décaler le block */
+	left:140px;}
+
+acronym { text-decoration:underline; color:#666;}
+
+.info_pgsection { /* Message d'information pages du site. Pour le centrer dans IE, il faut fixer sa largeur */
+	width:100%; }
+.code {margin-left:2%; padding-bottom:2em;}
+
+#hors-service {
+	width:100%; border:0;}
+	
+#message_important { height:60px;}
+#m_gestion_unite { height:120px;}
+#zone_infos, #membres #msg_membres { height:70px;}
+
+fieldset.ancien legend { background-color:#FFF;}
+
+a.bouton { border:0;}
+
+/* Icône correspondant au niveau d'accès minimum du forum */
+/* Comme IE ne gère pas correctement le png, on met du gif */
+
+#forum td.f_0 {background:#FFF url('../../templates/default/forum/forum0_ie.gif') no-repeat 0 25%;}
+#forum td.f_1 {background:#FFF url('../../templates/default/forum/forum1_ie.gif') no-repeat 0 25%;}
+#forum td.f_2 {background:#FFF url('../../templates/default/forum/forum2_ie.gif') no-repeat 0 25%;}
+#forum td.f_3 {background:#FFF url('../../templates/default/forum/forum3_ie.gif') no-repeat 0 25%;}
+#forum td.f_4 {background:#FFF url('../../templates/default/forum/forum4_ie.gif') no-repeat 0 25%;}
+#forum td.f_5 {background:#FFF url('../../templates/default/forum/forum5_ie.gif') no-repeat 0 25%;}
+
+.post_message textarea {width:500px; height:200px;}
+
+/* La largeur du tableau pose problème */
+.form_config_site table, .form_gestion_unite table { width:auto;}
+
+/* l'attribut min-height n'est pas connu de IE... et selon les standards, height ne change pas même si le contenu dépasse */
+#forum .message {
+	height:120px; }
+div.com_pair, div.com_impair { height:170px;}
+
+/* Sur la page de mise à jour du mot de passe, IE ne prend pas en charge les puces numériques > 9 */
+.update_pw li { list-style-type:disc;}
+
+/* Encart de téléchargement de fichiers */
+div.download_fichier { height:100px;}

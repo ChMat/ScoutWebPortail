@@ -1,0 +1,80 @@
+# Désactiver les variables globales pour améliorer la sécurité
+#php_flag register_globals off
+
+# Démarrage du moteur de rewriting
+RewriteEngine on
+
+# Index général et de sections
+RewriteRule ^index\.htm$ /scoutwebportail/index.php
+RewriteRule ^index(.{0,1})\.htm$ /scoutwebportail/index.php?niv=$1
+
+# Forum
+RewriteRule ^forum\.htm$ /scoutwebportail/index.php?page=forum
+RewriteRule ^forum([0-9]*)\.htm$ /scoutwebportail/index.php?page=forum&f=$1
+RewriteRule ^forum([0-9]*)_([0-9]*)\.htm$ /scoutwebportail/index.php?page=forum&f=$1&pg=$2
+RewriteRule ^fil([0-9]+)\.htm$ /scoutwebportail/index.php?page=forum_fil&fil=$1
+RewriteRule ^fil([0-9]+)_([0-9]+)\.htm$ /scoutwebportail/index.php?page=forum_fil&fil=$1&pg=$2
+RewriteRule ^forumsearch\.htm$ /scoutwebportail/index.php?page=forum&do=search
+
+# Tally
+RewriteRule ^tally([0-9]+)\.htm$ /scoutwebportail/index.php?page=tally&numero=$1
+RewriteRule ^tally_([0-9]+)\.htm$ /scoutwebportail/index.php?page=tally&pg=$1
+RewriteRule ^tally\.htm$ /scoutwebportail/index.php?page=tally
+
+# Galerie photo
+RewriteRule ^([a-z]{1})_galerie\.htm$ /scoutwebportail/index.php?niv=$1&page=galerie
+RewriteRule ^([a-z]{1})_galerie_?([0-9]*)\.htm$ /scoutwebportail/index.php?niv=$1&page=galerie&show=$2
+RewriteRule ^([a-z]{1})_galerie_?([0-9]*)_?([0-9]*)\.htm$ /scoutwebportail/index.php?niv=$1&page=galerie&show=$2&photo=$3
+RewriteRule ^([a-z]{1})_galerie_?([0-9]*)_?([0-9]*)_?([0-9]*)\.htm$ /scoutwebportail/index.php?niv=$1&page=galerie&show=$2&photo=$3&pg=$4
+
+# Derniers commentaires de la galerie
+RewriteRule ^([a-z]{1})_lastcomments_?([0-9]*)\.htm$ /scoutwebportail/index.php?niv=$1&page=lastcomments&pg=$2
+
+# Page de téléchargements (diverses rubriques)
+RewriteRule ^([a-z]{1})_fichiers_([0-9]*)\.htm$ /scoutwebportail/index.php?niv=$1&page=fichiers&rub=$2
+RewriteRule ^fichiers_([0-9]*)\.htm$ /scoutwebportail/index.php?page=fichiers&rub=$1
+
+# Page de contact (ici elle regroupe les adresses des responsables de sections)
+RewriteRule ^contact\.htm$ /scoutwebportail/index.php?page=staff&qui=resp
+
+# News du site
+RewriteRule ^news_([0-9]+)\.htm$ /scoutwebportail/index.php?page=news&pg=$1
+
+# Livre d'or
+RewriteRule ^signerlivreor\.htm$ /scoutwebportail/index.php?page=livreor&do=ecrire
+RewriteRule ^lirelivreor\.htm$ /scoutwebportail/index.php?page=livreor
+RewriteRule ^livreor\.htm$ /scoutwebportail/index.php?page=livreor
+RewriteRule ^livreor_([0-9]+)\.htm$ /scoutwebportail/index.php?page=livreor&pg=$1
+
+# Profils des membres
+RewriteRule ^membre([0-9]+)\.htm$ /scoutwebportail/index.php?page=profil_user&user=$1
+RewriteRule ^monprofil\.htm$ /scoutwebportail/index.php?page=monprofil
+RewriteRule ^modifprofil\.htm$ /scoutwebportail/index.php?page=modifprofil
+
+# Page d'accueil membres (utilisable mais pas par défaut au cas où l'url-rewriting n'est pas activé)
+RewriteRule ^membres\.htm$ /scoutwebportail/index.php?page=membres
+
+# Inscription des membres
+RewriteRule ^inscr2_(.+)\.php$ /scoutwebportail/index.php?page=inscr&step=3&validation=$1
+RewriteRule ^inscr\.htm$ /scoutwebportail/index.php?page=inscr
+RewriteRule ^inscr2\.php$ /scoutwebportail/index.php?page=inscr&step=3
+
+# Liste des membres du site
+RewriteRule ^listembsite\.htm$ /scoutwebportail/index.php?page=listembsite
+RewriteRule ^listembsiteb\.htm$ /scoutwebportail/index.php?page=listembsite&ordre=connex
+
+#------------------------------------------------------
+# Ici, tu peux ajouter tes propres règles de réécriture
+
+
+
+#------------------------------------------------------
+
+# Lien générique vers la page d'une section
+RewriteRule ^([a-z]{1})_(.+)\.htm$ /scoutwebportail/index.php?niv=$1&page=$2
+
+# Lien générique vers toute autre page du portail
+RewriteRule ^(.+)\.htm$ /scoutwebportail/index.php?page=$1
+
+
+ErrorDocument 404 /scoutwebportail/404.html

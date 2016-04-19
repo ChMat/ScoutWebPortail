@@ -1,0 +1,17 @@
+Subject: Mot de passe perdu
+
+Bonjour {USER_PRENOM},
+
+Tu trouveras ci-dessous le nouveau mot de passe qui t'a été attribué.
+Tu pourras le modifier à ta prochaine connexion sur le portail.
+
+Ton pseudo : {USER_PSEUDO}
+Mot de passe : {PW_PROVISOIRE}
+
+A bientôt sur le site d'Unité ({ADRESSE_SITE}).
+
+Le webmaster, {WEBMASTER_PSEUDO}
+
+
+--
+PS : Si vous considérez ce mail comme du spam, merci de le signaler en répondant à ce mail.

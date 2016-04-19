@@ -1,0 +1,50 @@
+/*
+* 12/12/2005 - 22:40:00 - Scout Web Portail - v 1.1.1
+*
+* complet_melange.css v 1.1 - Styles du menu complet mixte (unités mélangées)
+* Copyright (C) 2005 ChMat
+* http://www.scoutwebportail.org
+*
+* This file is part of Scout Web Portail.
+*/
+/*
+Structure du menu :
+div id=menu
+	a id=pseudo_membre
+	ul id=menu_membre
+	  li
+	    a class=accueil profil gestion_unite pages_restreintes pages_sections forum_staffs
+	ul id=menu_base
+	  li
+	    a class=accueil login inscription forum tally
+	ul class=sections_unite (autant de listes que d'unités)
+	  li class=section > nom d'une section
+	  li class=unite > nom d'une unité
+	    ul
+		  li (class=aucun_lien)
+		    a (class=new_lien)
+	a id=gestion_menu
+	ul id=menu_general
+*/
+#menu {
+	float:left; width:140px; background: #E9D3C8 url('../../../templates/default/images/fond_menu.png') repeat-y; 
+	border:1px #930 solid; border-left:0; border-top:0;}
+#menu #pseudo_membre, #menu_membre .accueil {
+	text-align:center; background-color : #930;}
+#menu ul {list-style-type: none; padding: 0; margin: 0;}
+	#menu li, #menu_base li {margin:0; padding:0;}
+#menu a {color: #FFF; display:block; text-decoration: none; text-align: left; padding-left: 5px;}
+#menu_membre .accueil, #menu .sections_unite {margin-top: 3px;}
+#menu #menu_membre {padding-bottom: 10px;}
+#menu_base a.forum:before, #menu_base a.tally:before {content: '> ';}
+#menu .unite, #menu .section, #menu_base, #menu #pseudo_membre, #menu_membre .accueil {
+	font-weight: bold;}
+#menu .unite {background-color: #930;}
+#menu .section {text-align: center; background-color: #D19275;}
+#menu #menu_general {margin-top: 1em;}
+#menu .new_lien {padding-left:18px; background: url('../../../templates/default/images/plus.png') no-repeat 5px;}
+#menu #gestion_menu {
+	padding-left:18px; background: url('../../../templates/default/images/go.png') no-repeat 5px;}
+#menu a.lienmort {text-align:center;}
+#menu li a:hover, #menu #gestion_menu:hover {background-color:#930; color:#FFF;}
+#bloc_connectes a { display:inline;}

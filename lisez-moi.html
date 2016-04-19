@@ -1,0 +1,558 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Lisez-moi - Scout Web Portail</title>
+<!--
+* 12/12/2005 - 22:40:00 - Scout Web Portail - v 1.1.1
+*
+* lisez-moi.html v 1.1 - Informations utiles au sujet du portail
+* Copyright (C) 2005 ChMat
+* http://www.scoutwebportail.org
+*
+* This file is part of Scout Web Portail.
+*
+* Scout Web Portail is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* Scout Web Portail is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with Scout Web Portail; if not, write to the Free Software
+* Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA.
+*/
+/*
+* Modifications v 1.1
+*	Ajout de la section Mise à jour
+*/
+-->
+<meta name="last_modif" content="18 octobre 2005" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<style type="text/css">
+
+/* body
+**********************************************/
+/* #index permet éventuellement de donner un style différent par rapport au body */
+body { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color: #000; background-color:#FFF;} 
+/* On annule les styles définis par certains navigateurs
+*************************************************************************************/
+h1, h2, h3, h4, h5, h6, pre, blockquote, td, th { font-size:11px; }
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, p, blockquote, dl, dt, dd {
+	margin:0; padding:0 }
+a img, :link img, :visited img { border:none; }
+
+/* On remet en place un certain nombre de styles
+*************************************************************************************/
+/* Cette partie de la feuille de style est sous licence Creative Commons.			*/
+p, ul, ol {margin-bottom: 1em;}
+p.petitbleu, p.petit { margin-bottom:2px;}
+
+h1, h2, h3, h4 {margin-bottom:0.5em;}
+
+dl {margin: 0 0 0 1em;}
+dl dt {margin: 0 0 .5em 0; border-bottom: solid #F3F3F3 1px; padding-bottom: 0.2em;}
+dl dd+dt {margin-top: 1.2em;}
+dl dd {margin: 0 0.9em 0.9em 0.9em;}
+
+ol {list-style: decimal;}
+ol li {margin: 0 0 0 2em;}
+ol li ol {margin: 1em 0 1em 1em;}
+ol li ul {margin: 1em 0 1em 1em;}
+
+ul {list-style: disc;}
+ul li {margin: 0 0 0 2em;}
+ul li ul {margin: 0 0 0 1em; list-style: circle;}
+ul li ol {margin: 0 0 0 1em;}
+/* Fin de la partie sous licence Creative Commons 									*/
+
+ul.dir li { list-style-type:none; /* liste de dossiers */
+	padding-left:18px; background: url('../../templates/default/images/go.png') no-repeat 0px;}
+
+acronym {border-bottom:1px dotted; cursor:help;}
+label:hover { cursor:pointer; text-decoration:underline;}
+
+/* a
+**********************************************/
+:link, :link:active {color: #339;}
+:link:hover {color: #930;}
+
+/* Définition des balises de code 
+**********************************************/
+code, .code {color: #060;}
+.code {
+	border:1px #D1D7DC solid; background: url('../../templates/default/images/fond-code.png') repeat-y; 
+	width:95%; margin:auto; padding:0.2em; overflow:auto; margin-top:0.2em; margin-bottom:0.5em;}
+blockquote {
+	border-top:1px #DADADA solid; border-bottom:1px #DADADA solid; width:70%; margin:0.2em 3% 0.2em 3%; padding:0.2em; 
+	font-style:italic;}
+	.info {margin-left:3%; padding-top:0.3em; font-weight:bold; color:#666; display:block;}
+
+/* Balises de titre 
+**********************************************/
+h1 {
+	font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px; font-weight:normal; 
+	color: #C05A27; text-indent: 2em; line-height: 1.8em; border-bottom: solid #930 1px;}
+h2, .titre2 {
+	font-size: 14px; color: #930; font-weight:bold; background-color: #FFF8DC; border-bottom: 1px #D19275 solid;}
+h3 {font-size:12px; color:#C05A27; font-style:italic; margin-top:1em;}
+p + h3 {margin-top:0;}
+h4, h5, h6 {font-weight:bold; color: #339;}
+hr {display:none;}
+
+/* Zones de tableaux 
+**********************************************/
+th {  
+	font-weight:bold; color:#FFF; background:#E9D3C8 url('../../templates/default/images/fond_titre.png') repeat-x 50%;}
+td {color: #000;}
+
+/* Définition des classes du portail
+**********************************************/
+.cadrenoir {border: 1px #930 solid; margin-bottom:1em;}
+.petit, .petitbleu, .petitbleu a {font-size:10px; font-family: Verdana, Arial, Helvetica, sans-serif;}
+.petitbleu, #dernier_commentaire .date {color: #69C;}
+.rmq {font-weight: bold; color: #C30;}
+.rmqbleu, dl dt, #dernier_commentaire .auteur {font-weight: bold; color: #339;}
+
+/* Lignes de tableaux alternées */
+.td-1, .td-4 {background-color: #F3F3F3; color: #666; text-decoration: none;}
+.td-2, .td-3 {background-color: #FFF; color: #666; text-decoration: none;}
+.td-1 a, .td-4 a, .td-2 a, .td-3 a { text-decoration:none; color:#666;}
+.td-1 td, .td-4 td, .td-2 td, .td-3 td { color:#666;}
+.td-4 {color: #000;}
+.td-1:hover, .td-4:hover, .td-2:hover, .td-3:hover {background-color: #DDD;}
+.td-gris { background-color:#F3F3F3;}
+
+</style>
+</head>
+<body>
+<h1 id="table">Scout Web Portail - Fichier lisez-moi</h1>
+<ol>
+  <li><a href="#preambule">Pr&eacute;ambule</a></li>
+  <li><a href="#presentation_scout_web_portail">Pr&eacute;sentation</a></li>
+  <li><a href="#licence_utilisation">Licence </a></li>
+  <li><a href="#installation">Installation du portail </a> 
+    <ol>
+      <li><a href="#configuration_requise">Configuration requise </a></li>
+      <li><a href="#procedure_installation">Proc&eacute;dure d'installation</a></li>
+      <li><a href="#configuration_initiale">Configuration initiale</a></li>
+      <li><a href="#design">Design et Templates</a></li>
+    </ol>
+  </li>
+  <li><a href="#sauvegarde">Sauvegarde des donn&eacute;es et r&eacute;installation 
+    </a>
+    <ol>
+      <li><a href="#sauvegarde">Sauvegarde des donn&eacute;es</a></li>
+      <li><a href="#reinstallation_vide">R&eacute;installation &agrave; vide</a></li>
+      <li><a href="#reinstallation_sauvegarde">R&eacute;installation depuis une sauvegarde</a></li>
+    </ol>
+  </li>
+  <li><a href="#avant_mise_a_jour">Mise &agrave; jour du portail</a>    <ol>
+      <li><a href="#avant_mise_a_jour">Avant toute mise &agrave; jour</a></li>
+      <li><a href="#mise_a_jour">Mise &agrave; jour de la version 1.0.x &agrave; 1.1</a></li>
+      <li><a href="#mise_a_jour_modules">Modules personnalis&eacute;s et version 1.1</a></li>
+    </ol>
+  </li>
+  <li><a href="#desinstaller">D&eacute;sinstallation</a></li>
+  <li><a href="#problemes">Probl&egrave;mes</a></li>
+  <li><a href="#dons">Dons</a></li>
+  <li><a href="#participer">Participer &agrave; l'am&eacute;lioration de SWP</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#versions">Historique des versions</a></li>
+</ol>
+<h2 id="preambule">1. Pr&eacute;ambule</h2>
+<p>Scout Web Portail porte bien son nom; c'est un portail internet sp&eacute;cialis&eacute; 
+  dans les groupes scouts, dot&eacute; de tous les outils essentiels &agrave; 
+  cet objectif. Inspir&eacute; de loin par les projets Wiki et phpBB, le SWP est 
+  le fruit de deux ans de d&eacute;veloppement par Christian Mattart.</p>
+<p>Pourquoi Scout Web Portail ? Eh bien parce que...</p>
+<p>Aujourd'hui, il est offert &agrave; la communaut&eacute; afin de simplifier 
+  le travail de
+  mise &agrave; jour des diff&eacute;rents sites d'unit&eacute; qui choisiront 
+  le portail SWP.</p>
+<p>Nous esp&eacute;rons que son utilisation vous satisfera en tous points; n'h&eacute;sitez 
+  pas &agrave; <a href="http://www.scoutwebportail.org/forum.htm">nous signaler tout 
+  bug</a> que vous rencontreriez.</p>
+<p>A l'heure actuelle, aucune documentation n'existe pour le portail.
+  Il a &eacute;t&eacute; test&eacute; pendant ses deux ann&eacute;es de d&eacute;veloppement 
+  et normalement, la
+  plupart des bugs ont &eacute;t&eacute; &eacute;radiqu&eacute;s et les outils 
+  disponibles parlent d'eux-
+  m&ecirc;mes.
+  Cependant, en fonction du succ&egrave;s rencontr&eacute; par le portail, une 
+  documentation
+  sera probablement r&eacute;dig&eacute;e. Avis aux amateurs !</p>
+<p>Comme aucune documentation n'existe, lisez attentivement ce fichier avant de
+  passer &agrave; l'installation proprement dite.</p>
+<p> Le portail est distribu&eacute; sous licence GNU GPL, ce qui vous offre toute 
+  la flexibilit&eacute; requise dans l'adaptation du portail &agrave; votre groupe 
+  scout. Si vous apportez des am&eacute;liorations significatives au portail, 
+  n'h&eacute;sitez pas &agrave; les partager avec la communaut&eacute; sur ce 
+  site !</p>
+<h2 id="presentation_scout_web_portail">2. Pr&eacute;sentation du Scout Web Portail</h2>
+<p>SWP est un portail web sp&eacute;cialement destin&eacute; aux groupes scouts.</p>
+<p>Tout est pr&eacute;vu sur le portail pour simplifier la vie du webmaster et des 
+  animateurs qui s'occupent de la mise &agrave; jour des informations sur le site.</p>
+<p>Chaque animateur peut g&eacute;rer lui-m&ecirc;me les pages web de sa section. La gestion
+  du portail est enti&egrave;rement collaborative.</p>
+<p>Le tout se fait tr&egrave;s simplement comme sur un forum internet ou, si 
+  l'animateur le souhaite, au format html.</p>
+<p>D'autres personnes peuvent &eacute;galement r&eacute;diger les pages du site, sans pour 
+  autant &ecirc;tre animateur. Un statut de co-webmaster peut &ecirc;tre attribu&eacute; &agrave; des
+  membres du portail, ce qui leur donne acc&egrave;s la gestion des pages du site et
+des albums photos, mais pas &agrave; la gestion des membres de l'Unit&eacute; [<a href="index.php?page=recapitulatif_droits">synth&egrave;se des droits d'acc&egrave;s</a>].</p>
+<p>De plus, SWP offre un espace d'&eacute;change, autant public que r&eacute;serv&eacute; aux staffs.
+  Un tout nouveau forum a &eacute;t&eacute; d&eacute;velopp&eacute; pour renforcer la qualit&eacute; des &eacute;changes
+  dans un lieu unique &agrave; la gestion simplifi&eacute;e.
+  Il est possible de cr&eacute;er un grand nombre de forums et d'autoriser les acc&egrave;s
+  et la mod&eacute;ration selon vos pr&eacute;f&eacute;rences. De cette mani&egrave;re, chacun des staffs<br />
+  et chacune des section peut discuter &agrave; son aise dans un espace qui lui est 
+r&eacute;serv&eacute;.</p>
+<p>Les albums photos permettent de rassembler tous les albums de l'Unit&eacute;. Chaque 
+  animateur ou co-webmaster peut <strong>cr&eacute;er des albums photos</strong> pour les sections 
+  <strong>tr&egrave;s simplement</strong>. Les photos, d&eacute;pos&eacute;es par les personnes autoris&eacute;es, sont 
+redimensionn&eacute;es automatiquement au format web par le portail.</p>
+<p>Une nouveaut&eacute;, encore jamais vue ailleurs, est la possibilit&eacute; de <strong>cr&eacute;er des 
+  albums photos distants</strong>. Le portail ne contient que la farde. Les photos sont
+  stock&eacute;es sur un autre site web !
+  La cr&eacute;ation d'albums distants peut &ecirc;tre faite automatiquement si vous 
+  disposez d'un acc&egrave;s FTP au site o&ugrave; sont stock&eacute;es les photos, ou manuellement.</p>
+<p>Le lieu d'&eacute;change que forme le Scout Web Portail permet de <strong>renforcer 
+  la communication</strong> entre animateurs et entre staffs rendue difficile 
+  par le fait que, bien souvent, une partie des animateurs n'est pas disponible
+durant la semaine.</p>
+<p>Plus encore, les pages &agrave; acc&egrave;s restreint permettent de conserver une trace &eacute;crite des comptes-rendus de r&eacute;unions de staff ou d'unit&eacute;.</p>
+<p>Le second outil essentiel pour un groupe scout est sa <strong>Gestion des membres</strong>.
+  Tous les outils sont disponibles pour vous faciliter la vie dans la gestion
+  quotidienne des Unit&eacute;s et des Sections : passages, cotisations, changements
+  d'adresse, double adresse, liste d'attente, sizaines et patrouilles,
+  publipostage pour r&eacute;duire les frais de courrier, listings membres, listings
+photos pour retenir facilement les visages des nouveaux.</p>
+<p>L'avantage primordial de cet outil est le fait que toutes les donn&eacute;es sont
+  accessibles &agrave; tout moment par les animateurs. Et si le portail devient le
+  centre de votre gestion des membres, il contiendra les donn&eacute;es les plus &agrave;
+jour &agrave; tout instant.</p>
+<p>En relation avec la l&eacute;gislation sur la <strong>protection de la vie priv&eacute;e</strong>, les
+  donn&eacute;es des membres ne sont pas accessibles au public. Les animateurs doivent s'inscrire et &ecirc;tre reconnus par d'autres animateurs
+  d&eacute;j&agrave; pr&eacute;sents sur le portail avant de pouvoir acc&eacute;der &agrave; ces donn&eacute;es. A l'inscription, les membres s'engagent &agrave; ne pas divulguer les donn&eacute;es &agrave; <br />
+caract&egrave;re priv&eacute; auxquelles ils pourraient avoir acc&egrave;s sur le portail.</p>
+<p>Il reste encore de nombreuses fonctions &agrave; pr&eacute;senter, mais l'essentiel est dit.</p>
+<h2 id="licence_utilisation">3. Licence d'utilisation</h2>
+<p>Le Scout Web Portail est publi&eacute; gratuitement sous licence GNU GPL. R&eacute;f&eacute;rez-vous 
+  au fichier licence.txt pour plus d'infos.</p>
+<p>Ceci signifie que vous pouvez utiliser gratuitement ce script, le modifier
+  pour votre usage propre. Si vous en distribuez une version modifi&eacute;e, 
+  
+  elle doit elle-m&ecirc;me suivre les termes de la licence GPL. </p>
+<p class="rmq">L'AUTEUR NE POURRAIT EN AUCUN CAS ETRE TENU POUR RESPONSABLE DES PROBLEMES 
+  
+  QUI POURRAIENT RESULTER DE L'UTILISATION DE CE SCRIPT OU DE L'UNE DE SES 
+  VERSIONS DERIVEES.</p>
+<p>La GNU GPL : <a href="http://www.gnu.org/" target="_blank">http://www.gnu.org/</a></p>
+<h2 id="installation">4. Installation du portail</h2>
+<ol>
+  <li><a href="#configuration_requise">Configuration requise</a></li>
+  <li><a href="#procedure_installation">Proc&eacute;dure d'installation</a></li>
+  <li><a href="#configuration_initiale">Configuration initiale</a></li>
+  <li><a href="#design">Design et Templates</a></li>
+</ol>
+<h3>Mise &agrave; jour du portail</h3>
+<p>Une section de ce document est consacr&eacute;e &agrave; la <a href="#mise_a_jour">mise &agrave; jour</a> d'une ancienne
+installation du portail. </p>
+<h3 id="configuration_requise">4.1. Configuration requise</h3>
+<p>Pour installer le portail, vous devez disposer d'un serveur web acceptant : 
+</p>
+<ul>
+  <li>le PHP 3 au minimum (PHP 4 ou 5 est conseill&eacute;).</li>
+  <li>une base de donn&eacute;es MySQL </li>
+  <li>optionnellement les fichiers .htaccess.</li>
+</ul>
+<p>Nous conseillons &eacute;galement que le serveur web accepte :</p>
+<h4>l'url-rewriting </h4>
+<p>Cette fonction permet d'utiliser des adresses plus parlantes pour l'utilisateur. 
+  Exple : <code>index.php?niv=g&amp;page=forum&amp;fil=12</code> devient <code>fil12.htm</code></p>
+<p>Si vous ignorez si l'url-rewriting est actif sur votre espace web, activez-le 
+  &agrave; l'installation et testez le fonctionnement du site. S'il ne fonctionne 
+  pas, vous pourrez le d&eacute;sactiver depuis la page de configuration du portail 
+  apr&egrave;s avoir supprim&eacute; le fichier .htaccess du dossier principal 
+  du portail.</p>
+<h4>la fonction mail() native de php </h4>
+<p>A l'heure actuelle, nous n'avons pas impl&eacute;ment&eacute; de fonction mail() 
+  modifi&eacute;e. Lycos et Free notamment, ont modifi&eacute; cette fonction 
+  avec leurs propres param&egrave;tres. A l'installation, vous pouvez choisir 
+  d'activer ou non la fonction mail() sur le site. Ce choix peut &ecirc;tre modifi&eacute; 
+  par la suite depuis la page de configuration du portail.</p>
+<p>Si n&eacute;cessaire, vous pouvez adapter le script de gestion des emails.
+  Il se trouve dans le fichier prv/emailer.php qui est une adaptation
+de la classe d'envoi de mails propos&eacute;e par le groupe PHPbb.</p>
+<h3 id="procedure_installation">4.2. Proc&eacute;dure d'installation</h3>
+<p>Pour installer le portail sur votre site web, un programme d'installation est 
+  &agrave; votre disposition. Suivez simplement les instructions ci-dessous ainsi 
+  que sur les pages correspondantes.</p>
+<p>A. Transf&eacute;rez d'abord l'enti&egrave;ret&eacute; des fichiers du portail 
+  sur votre site web.</p>
+<p>B. Afin de permettre au portail d'&eacute;crire des fichiers sur le serveur, 
+  modifiez les droits en &eacute;criture des dossiers suivants : </p>
+<ul>
+  <li>dossier racine du portail</li>
+  <li>dossier cache/</li>
+  <li>dossier img/</li>
+  <li>dossier img/activites/</li>
+  <li>dossier img/photosmembres/</li>
+  <li>dossier img/photosmembres/avatars/</li>
+  <li>dossier fichiers/</li>
+</ul>
+<p><em>Sans cela, les outils concern&eacute;s renverront des messages d'erreur</em>.</p>
+<p>C. Ouvrez-votre navigateur et rendez vous &agrave; l'adresse o&ugrave; vous 
+  avez plac&eacute; le 
+  portail (exple : http://www.votresite.org/ ). Le portail vous redirigera
+  automatiquement vers le programme d'installation.</p>
+<p>D. Remplissez simplement le formulaire avec les donn&eacute;es ad&eacute;quates. 
+  Pour l'url-rewriting et la fonction mail(), r&eacute;f&eacute;rez-vous &agrave; 
+  la <a href="#configuration_requise">configuration requise</a>.</p>
+<h3 id="configuration_initiale">4.3. Configuration initiale</h3>
+<p>Une fois l'installation effectu&eacute;e, vous arrivez sur la page d'accueil 
+  du portail.</p>
+<p>A. Connectez-vous &agrave; votre compte de webmaster.</p>
+<p>B. Le portail vous propose de cr&eacute;er une Unit&eacute;, base du fonctionnement 
+  du portail. Une section anciens sera automatiquement cr&eacute;&eacute;e pour 
+  cette unit&eacute;. Vous pouvez cr&eacute;er autant d'unit&eacute;s que vous 
+  souhaitez si votre groupe scout en compte plusieurs (&agrave; l'origine, le 
+  groupe scout d'Andenne, pour lequel a &eacute;t&eacute; cr&eacute;&eacute; le 
+  portail, regroupe une unit&eacute; guide et une unit&eacute; scoute).</p>
+<p>C. Apr&egrave;s avoir cr&eacute;&eacute; l'unit&eacute;, ajoutez-y les sections.</p>
+<p>D. Dans la page de Gestion des Sections, vous pouvez activer les espaces web 
+  des sections pour afficher leur nom dans le menu du portail.</p>
+<p>E. Maintenant que les espaces web des sections sont activ&eacute;s, vous pouvez 
+  
+  ajouter des liens dans leurs menus. Si les liens que vous cr&eacute;ez m&egrave;nent 
+  vers 
+  des pages inexistantes, il vous sera propos&eacute; de les cr&eacute;er. Simple, 
+  non ?</p>
+<p>F. Afin de permettre &agrave; d'autres membres de s'inscrire sur le portail, 
+  cr&eacute;ez 
+  des statuts de membres. Cr&eacute;ez un statut d'animateur de section et d'animateur 
+  
+  d'unit&eacute; pour chaque section et unit&eacute; de la base de donn&eacute;es 
+  (animateur baladin, 
+  animateur louveteau, ...) et liez ces statuts &agrave; leur section respective. 
+  
+  Ensuite, vous pouvez cr&eacute;er d'autres statuts (Membre de l'Unit&eacute;, 
+  baladin, 
+  scout, nuton, guide, parent de scout, parent de baladin, ancien scout, ... &agrave; 
+  
+  votre go&ucirc;t).</p>
+<p><span class="rmqbleu">Note </span>: Les statuts visiteur et webmaster sont prot&eacute;g&eacute;s contre les modifications. </p>
+<p>G. Ensuite, vous pouvez configurer un tas de d&eacute;tails pour le portail 
+  depuis la 
+  page de configuration du portail.</p>
+<h3 id="design">4.4. Design et templates</h3>
+<p>Le design du portail repose uniquement sur les feuilles de styles CSS.</p>
+<p>Nous vous sugg&eacute;rons de vous plonger dans 
+  les fichiers de styles du portail qui se trouvent dans le dossier
+  <strong>templates/default/</strong>  Vous pouvez les modifier afin d'y apporter votre touche personnelle.</p>
+<p>Normalement, les noms des classes sont clairs et les styles sont organis&eacute;s
+  selon la structure du portail. Divers commentaires &eacute;claircissent parfois 
+  certains points.</p>
+<p>En attendant, il vous reste &agrave; &eacute;tudier les styles CSS (Google est votre ami).
+Il n'y a rien de bien compliqu&eacute;...</p>
+<p> Ayons d'ailleurs une pens&eacute;e &eacute;mue pour les pauvres webmasters condamn&eacute;s &agrave; cr&eacute;er
+  des styles sp&eacute;cifiques &agrave; Microsoft Internet Explorer, si particulier 
+dans son interpr&eacute;tation en si b&eacute;mol des styles CSS.</p>
+<h2 id="sauvegarde">5. Sauvegarde des donn&eacute;es et r&eacute;installation</h2>
+<ol>
+  <li><a href="#sauvegarde">Sauvegarde des donn&eacute;es</a></li>
+  <li><a href="#reinstallation_vide">R&eacute;installation &agrave; vide</a></li>
+  <li><a href="#reinstallation_sauvegarde">R&eacute;installation depuis une sauvegarde</a></li>
+</ol>
+<h3 id="sauvegarde"> 5.1. Sauvegarde des donn&eacute;es</h3>
+<p>Nous vous conseillons d'effectuer fr&eacute;quemment une sauvegarde des donn&eacute;es 
+  du portail. Pour ce faire, voici les &eacute;l&eacute;ments &agrave; sauvegarder 
+  :</p>
+<ul>
+  <li> L'ensemble des donn&eacute;es de la base (sans la structure des tables)</li>
+  <li>Le fichier connex.php</li>
+  <li>Le dossier img et son contenu</li>
+  <li>Le dossier fichiers et son contenu</li>
+</ul>
+<h3 id="reinstallation_vide">5.2. R&eacute;installation &agrave; vide </h3>
+<p>R&eacute;installer le portail pour lui donner une seconde jeunesse en le vidant
+  de son contenu.</p>
+<p>En admettant que les fichiers du portail soient toujours pr&eacute;sents d'une 
+  installation pr&eacute;c&eacute;dente du portail.</p>
+<ul>
+  <li>  Supprimer connex.php et config.php (&eacute;ventuellement .htaccess)</li>
+  <li> Supprimer les tables du portail dans la base de donn&eacute;es</li>
+  <li>Replacer install.php et le dossier install sur le serveur</li>
+  <li>Installer le portail normalement (premi&egrave;re installation)<br />
+  </li>
+</ul>
+<h3 id="reinstallation_sauvegarde"> 5.3. R&eacute;installation depuis une sauvegarde </h3>
+<p> Si, pour une raison ou une autre, vous souhaitez r&eacute;installer le portail
+    et que vous souhaitez r&eacute;cup&eacute;rer vos donn&eacute;es d'une installation pr&eacute;c&eacute;dente,
+    assurez-vous d'avoir &agrave; votre disposition les fichiers mentionn&eacute;s ci-dessus
+  dans la section &quot;Sauvegarde des donn&eacute;es &quot; de ce chapitre.</p>
+<ul>
+  <li>Apr&egrave;s avoir fait la sauvegarde des donn&eacute;es, faites le m&eacute;nage sur le serveur 
+    et <em>supprimez compl&egrave;tement</em> l'ancienne version du portail.</li>
+  <li> Ensuite, <em>r&eacute;cup&eacute;rez le script du portail de la m&ecirc;me version</em> que celle pour laquelle vous avez fait une sauvegarde des donn&eacute;es. 
+    Placez l'ensemble des fichiers du portail sur le serveur.</li>
+  <li> Remplacez l'ensemble des dossiers &quot;img&quot; et &quot;fichiers&quot; par les dossiers que
+    vous aviez sauvegard&eacute;s, et assurez-vous que le portail puisse y &eacute;crire.</li>
+  <li> Installez le portail comme pour une installation &agrave; vide.</li>
+  <li> <strong>Remplacez le fichier connex.php</strong> produit &agrave; l'installation par la version
+    que vous aviez sauvegard&eacute;e.</li>
+  <li> Videz le contenu des tables du portail (ne supprimez pas la structure) et
+    ins&eacute;rez-y le contenu de la base que vous aviez sauvegard&eacute;.</li>
+  <li> Lancez le portail et le cas &eacute;ch&eacute;ant, d&eacute;sactivez et r&eacute;activez 
+  l'url-rewriting pour g&eacute;n&eacute;rer &agrave; nouveau le fichier .htaccess</li>
+</ul>
+<h2>6. Mise &agrave; jour du portail</h2>
+<ol>
+  <li><a href="#avant_mise_a_jour"> Avant toute mise &agrave; jour</a></li>
+  <li> <a href="#mise_a_jour">Mise &agrave; jour de la version 1.0.x &agrave; 1.1</a></li>
+  <li> <a href="#mise_a_jour_modules">Modules personnalis&eacute;s et version 1.1</a></li>
+</ol>
+<h3 id="avant_mise_a_jour">6.1. AVANT TOUTE MISE A JOUR</h3>
+<p>Avant de commencer la proc&eacute;dure de mise &agrave; jour du portail, faites 
+une <span class="rmqbleu">SAUVEGARDE COMPLETE</span> afin de r&eacute;cup&eacute;rer les donn&eacute;es en cas de probl&egrave;me.</p>
+<p>Pour rappel et conform&eacute;ment &agrave; la licence GPL, aucune garantie n'est donn&eacute;e 
+  sous quelque forme que ce soit quant &agrave; la fiabilit&eacute; et &agrave; la s&eacute;curit&eacute; 
+  du logiciel. Et aucun support ne sera fourni pour r&eacute;cup&eacute;rer une installation
+endommag&eacute;e en l'absence de sauvegarde compl&egrave;te.</p>
+<h3 id="mise_a_jour"> 6.2. Mise &agrave; jour de la version  1.0.x &agrave; 1.1</h3>
+<p>Afin de garantir une mise &agrave; jour correcte, nous vous conseillons de suivre<br />
+les &eacute;tapes ci-dessous :</p>
+<ol>
+  <li> Si vous avez personnalis&eacute; les styles du portail, gardez une copie des fichiers CSS.
+    En effet, la version 1.1 apporte d'<strong>&eacute;normes modifications</strong> au niveau du design.</li>
+  <li> Uploadez l'ensemble des fichiers de la version 1.1 et <em>&eacute;crasez les anciens</em>.</li>
+  <li> Lancez le script de mise &agrave; jour.</li>
+</ol>
+<p>Etant donn&eacute; la quantit&eacute; de modifications apport&eacute;es au portail, des fichiers
+ont &eacute;t&eacute; renomm&eacute;s, supprim&eacute;s, scind&eacute;s, ...</p>
+<p> Le script de mise &agrave; jour effectue plusieurs op&eacute;rations :</p>
+<ul>
+  <li> Il supprime les fichiers officiels de la version pr&eacute;c&eacute;dente du portail*
+    mais il laisse les fichiers que vous auriez ajout&eacute;s au portail.
+    Si vous avez d&eacute;velopp&eacute; vos propres modules, lisez la section &quot;<a href="#mise_a_jour_modules">Modules personnalis&eacute;s et version 1.1</a>&quot;.</li>
+  <li>Il modifie la structure de la base de donn&eacute;es en plusieurs endroits.</li>
+  <li>Les forums public et des staffs sont rassembl&eacute;s en une seule entit&eacute;
+    totalement r&eacute;nov&eacute;e et am&eacute;lior&eacute;e.</li>
+  <li> Les messages des forums sont conserv&eacute;s et adapt&eacute;s &agrave; la nouvelle version.</li>
+  <li> Le portail comporte une biblioth&egrave;que de styles CSS compl&egrave;tement 
+    remani&eacute;e.</li>
+</ul>
+<p><em>Pour plus d'informations, voyez les <a href="http://www.scoutwebportail.org/versions.htm">notes de version</a>.</em></p>
+<h4> * Les fichiers obsol&egrave;tes sont les suivants :</h4>
+<ul>
+  <li>  afflisting2.php</li>
+  <li> afflisting.php</li>
+  <li> anciensphoto.php</li>
+  <li> envoi_fichier.php</li>
+  <li> forum_staffs.php</li>
+  <li> gestionnews.php (sans le signe _ )</li>
+  <li> liste_sections.php</li>
+  <li> liste_staffs.php</li>
+  <li> listinganciens2.php (sans le signe _ )</li>
+  <li> listinganciens.php (sans le signe _ )</li>
+  <li> sectionphoto2.php</li>
+  <li> update.php</li>
+  <li> update_partie.php</li>
+  <li> prv/fonc_securite.php</li>
+</ul>
+<p>Les anciennes tables des forums &agrave; supprimer sont les suivantes : </p>
+  <ul>
+    <li>swp_filsforum</li>
+    <li>swp_filsforum_staffs</li>
+    <li>swp_msgforum</li>
+    <li>swp_msgforum_staffs</li>
+  </ul>
+<h3 id="mise_a_jour_modules"> 6.3. Modules personnalis&eacute;s et version 1.1</h3>
+<p> 
+  La principale &eacute;volution du portail pouvant influencer les modules publi&eacute;s &agrave; l'heure actuelle sur le portail est la nouvelle biblioth&egrave;que de styles.</p>
+<p>Les auteurs respectifs des diff&eacute;rents modules sortiront probablement 
+  une version adapt&eacute;e de ceux-ci, n'h&eacute;sitez pas &agrave; vous tenir au courant en visitant
+r&eacute;guli&egrave;rement le <a href="http://www.scoutwebportail.org/">site du Scout Web Portail</a> ou en consultant le <a href="http://www.scoutwebportail.org/news.xml">fil rss de SWP</a>.</p>
+<h2 id="desinstaller">7. D&eacute;sinstallation</h2>
+<p>Pour d&eacute;sinstaller le portail, il suffit de supprimer tous les fichiers 
+  de
+  ce dossier et toutes les tables du portail dans la base de donn&eacute;es.</p>
+<p>Si la d&eacute;sinstallation vise &agrave; r&eacute;installer le portail, voir 
+  la section 
+  pr&eacute;c&eacute;dente du fichier lisez-moi.html.</p>
+<h2 id="problemes">8. Probl&egrave;mes connus</h2>
+<h3>Impossible de se connecter</h3>
+<p><a href="index.php?page=probleme_connexion">En cas de probl&egrave;mes de connexion</a>.</p>
+<h3>Erreur 500 (internal server error) </h3>
+<p>Si vous avez activ&eacute; l'url-rewriting &agrave; l'installation et qu'il 
+  n'est pas activ&eacute; sur le serveur de votre site, une erreur 500 (internal 
+  server error) se produit &agrave; chaque chargement de page. Pour r&eacute;soudre 
+  ce probl&egrave;me : </p>
+<ul>
+  <li>Supprimez le fichier .htaccess du dossier principal du portail, </li>
+  <li>Ensuite, d&eacute;sactivez l'url-rewriting depuis le panneau de configuration 
+    du portail.</li>
+</ul>
+<h3>T&eacute;l&eacute;chargement impossible</h3>
+<p>Les erreurs constat&eacute;es au t&eacute;l&eacute;chargement jusqu'&agrave; pr&eacute;sent &eacute;taient caus&eacute;es 
+par le serveur et non par SWP. Mais toute information est la bienvenue.</p>
+<h3>Upload de fichiers </h3>
+<p>Il se peut que l'upload de fichiers par protocole HTTP soit interdit,
+  ou que la taille du fichier d&eacute;passe la taille autoris&eacute;e.</p>
+<p>Dans ce cas, choisissez un fichier de plus petite taille ou v&eacute;rifiez
+  que l'upload de fichiers est bien activ&eacute; pour votre h&eacute;bergement.</p>
+<h3>Upload de photos / Redimensionnement</h3>
+<p>Les photos d&eacute;pos&eacute;es sur le portail sont redimensionn&eacute;es &agrave; l'aide
+  de la librairie de fonction GD2. 
+  Si elle n'est pas charg&eacute;e sur votre site, l'upload de photos pour les galeries
+  est impossible. Vous devrez les d&eacute;poser sur le serveur par FTP apr&egrave;s les avoir
+redimensionn&eacute;es manuellement.</p>
+<h3>Impossible de lire ou d'&eacute;crire dans un dossier</h3>
+<p>V&eacute;rifiez que vous avez correctement param&eacute;tr&eacute; les droits d'acc&egrave;s du dossier
+  concern&eacute;.
+  La configuration de certains serveurs n'autorise pas la modification des droits
+d'acc&egrave;s aux fichiers/dossiers et certaines erreurs peuvent se produire.</p>
+<h3>Autre probl&egrave;me</h3>
+<p>Si vous &ecirc;tes confront&eacute; &agrave; un <strong>autre probl&egrave;me</strong>, faites une recherche sur le <a href="http://www.scoutwebportail.org/forum.htm">forum
+  du portail</a>, d'autres utilisateurs y ont peut-&ecirc;tre d&eacute;j&agrave; &eacute;t&eacute; confront&eacute;s.</p>
+<p>Si vous ne trouvez <strong>aucune r&eacute;ponse</strong>, consultez le <a href="http://evolution.scoutwebportail.org/">site consacr&eacute; aux bugs
+et aux suggestions</a> et signalez votre probl&egrave;me.</p>
+<h2 id="dons">9. Dons</h2>
+<p>Ces deux derni&egrave;res ann&eacute;es, l'auteur a consacr&eacute; une tr&egrave;s 
+  grosse partie de son temps libre &agrave; la cr&eacute;ation et &agrave; l'am&eacute;lioration 
+  de ce portail. Faire fortune n'est <br />
+certainement pas l'objectif poursuivi avec la publication de ce portail. </p>
+<p>Le don est une forme de remerciement, d'encouragement &agrave; continuer le 
+  d&eacute;veloppement de nouveaux outils et &agrave; corriger les bugs d&eacute;couverts. D'autre part, l'h&eacute;bergement du site internet et les frais qui l'entourent
+  peuvent &ecirc;tre amortis &agrave; l'aide de vos dons. Les montants exc&eacute;dentaires seront donn&eacute;s &agrave; des oeuvres caritatives oeuvrant pour l'aide &agrave; la jeunesse.</p>
+<p> Si vous souhaitez faire un don sous une autre forme que de l'argent contactez
+l'auteur via le site du portail.</p>
+<p>Vous 
+      pouvez <a href="http://www.scoutwebportail.org/dons.htm">verser le montant que vous souhaitez</a>.</p>
+<h2 id="participer">10. Participer &agrave; l'am&eacute;lioration du portail</h2>
+<p>Si vous appr&eacute;ciez le portail et que vous souhaitez nous aider &agrave; 
+  le promouvoir et &agrave; le d&eacute;velopper, soyez le bienvenu !</p>
+<p>Les prochaines am&eacute;liorations du portail toucheront essentiellement &agrave; 
+  : </p>
+<ul>
+  <li>la r&eacute;daction d'une documentation compl&egrave;te (versions 1.x) </li>
+  <li>la mise en place d'un syst&egrave;me de templates (version 2.0) </li>
+  <li>le d&eacute;bogage et l'am&eacute;lioration du code source. (versions 1.x) 
+  </li>
+  <li>de nouvelles fonctionnalit&eacute;s. (versions 1.x) </li>
+  <li>toute id&eacute;e que vous aurez. (toutes versions)</p> </li>
+</ul>
+<h2 id="contact">11. Contact</h2>
+<p>Avant de me contacter, <a href="http://www.scoutwebportail.org/forum.htm">consultez utilement le forum</a> 
+  pour voir si votre question n'a pas d&eacute;j&agrave; &eacute;t&eacute; pos&eacute;e. 
+  Si ce n'est pas le cas, inscrivez-vous sur le portail 
+  et posez votre question sur le forum.</p>
+<h2 id="versions">12. Historique des versions</h2>
+<p><a href="http://www.scoutwebportail.org/versions.htm">L'historique des versions est disponible</a></p>
+</body>
+</html>

@@ -1,0 +1,19 @@
+Salut,
+
+{USER_PSEUDO} vient de rédiger une page à diffusion restreinte ({PAGE_TITRE}) sur le site d'Unité ({ADRESSE_SITE}).
+Tu peux également la lire sur le site pour la commenter.
+
+
+{PAGE_TEXTE}
+
+
+
+
+
+
+A bientôt !
+
+Le webmaster
+
+--
+PS : Si tu considères ce mail comme du spam, merci de le signaler à cette adresse : {WEBMASTER_EMAIL}

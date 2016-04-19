@@ -1,0 +1,12 @@
+Subject: Inscription sur le site
+
+Salut {USER_PRENOM},
+
+Ton statut '{USER_STATUT}' vient d'être reconnu sur le site d'Unité ({ADRESSE_SITE}).
+
+A bientôt sur {ADRESSE_SITE} !
+
+Le webmaster, {WEBMASTER_PSEUDO}
+
+--
+PS : Si tu considères ce mail comme du spam, merci de le signaler en répondant à ce mail ({WEBMASTER_EMAIL})

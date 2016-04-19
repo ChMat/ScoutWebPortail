@@ -1,0 +1,124 @@
+/*
+* 12/12/2005 - 22:40:00 - Scout Web Portail - v 1.1.1
+*
+* style_print.css v 1.1 - Styles utilisés à l'impression des pages du site
+* Copyright (C) 2005 ChMat
+* http://www.scoutwebportail.org
+*
+* This file is part of Scout Web Portail.
+*/
+/* Les standards du web permettent de gérer la manière dont seront affichés les éléments 
+*  du site **à l'impression**. Pas besoin donc de créer une fonction 'imprimer la page'
+*/
+body { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; color: #000;}
+a {
+	color: #339;}
+code {
+	color: #060;}
+h1 {
+	font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px; font-weight:normal; 
+	color: #C05A27; text-indent: 30px; 
+	line-height: 35px; border-bottom: 1px #930 solid;}
+h2, .titre2 {
+	font-size: 14px; color: #C30; font-weight: bold;}
+hr {
+	height: 1pt; color: #C30; width: 300px; text-align: center;}
+td {
+	font-size: 11px; color: #000; font-family: Verdana, Arial, Helvetica, sans-serif;}
+th {  
+	font-size: 12px; font-weight: bold; color: #339; background-color: #F3F3F3;}
+#corps {
+	background: #FFF;}
+.cadrenoir {
+	border: 1px #000 solid;}
+.grandthstaffs {
+	font-size: 13px; font-weight: normal; font-family: "Comic Sans MS", sans-serif; color: #FFF;}
+.lienmort, .menu, .lien, .menumembres, .liengalerie { 
+	text-decoration: none;} 
+.menu {
+	color: #FFF;}
+.lien, .menumembres {
+	color: #000;}
+.liengalerie {
+	font-weight: bold;}
+.petit, .petitbleu {
+	font-size: 10px; font-family: Verdana, Arial, Helvetica, sans-serif;}
+.petitbleu {
+	color: #69C;}
+.postbanni {
+	background-color: #F66; color: #999;}
+.rmq {  
+	font-weight: bold; color: #C30;}
+.rmqbleu {
+	color: #339; font-weight: bold;}
+.td-1 {
+	background-color: #F3F3F3; color: #666; text-decoration: none;}
+.td-2, .td-3 {
+	background-color: #FFF; color: #666; text-decoration: none;}
+.td-4 {
+	background-color: #F3F3F3; color: #000; text-decoration: none;}
+.tdfond2 {  
+	border-top: 1px #666 solid; background-color: #F3F3F3;}
+
+/* Pied de page
+**********************************************/
+#footer {
+	border-top:1px #999 solid; margin-top:2em; padding: 0 0.5em; font-size:9px; color: #999;}
+	#footer a {text-decoration:none;}
+	#footer .web {}
+	#footer .divers, #footer .top { display:none;}
+
+/* Forum
+**********************************************/
+#forum h2 { 
+	font-family:Georgia, "Times New Roman", Times, serif; font-size:16px;}
+
+/* Droits du forum */
+.f_droits { font-size:10px; text-align:right;}
+
+/* Boutons du forum */
+.f_poster p, .f_nouveau p, .post_message, .f_recherche, .f_pagination { display:none;}
+.statut { color:#69C; font-size:10px;}
+
+/* Discussion */
+.post {}
+.post_banni, .titre_banni {background-color:#D19275; color:#000;}
+.post_banni h2 {text-decoration: line-through;}
+.modo {text-align:right; color:#FFD700; font-weight:bold; font-style:italic; padding-right:0.5em;}
+.post .modo {color:#666;}
+.infos_posteur {float:right; margin-left:1em; margin-top:-30px;}
+	.pseudo { /* le pseudo du posteur */
+		margin-bottom:0; font-weight:bold;}
+	.avatar, .infos_post img { display:none;}
+.fil .infos_post {clear:both; color:#69C; text-align:right; border-bottom:1px #930 solid; padding:0.1em 0.2em 0.1em 0;}
+
+/* Eléments à ne pas afficher
+**********************************************/
+table.pg_restreinte_menu { display:none;}
+
+/* Eléments à ne pas afficher
+**********************************************/
+#top_page, #menu, #menu_outils_page, #mini_menu_flottant, #webmaster_data, .info_pgsection,
+.panneau, .menu_flottant {display:none;}
+
+/* Galerie photos
+**********************************************/
+.galerie_photo { text-align:center;}
+form.comment_post { display:none;}
+
+/* Galerie : Liste des photos sans commentaire */
+.liste_photos {
+	text-align:center; width:170px; height:170px; padding:2px; margin:2px; padding-top:10px; 
+	border:1px solid #CCC; background-color:#F3F3F3; float:left;}
+
+/* Zone de pagination (forum, galerie, livre d'or, ...) */
+p.pagination, p.pagination_photo, p.retour_pg { display:none;}
+
+/* Commentaires des photos dans la galerie photo */
+div.galerie_comment { border:1px solid #D2B48C; margin:1em;}
+	div.galerie_comment p { margin-bottom:2px; padding:2px;}
+	.galerie_comment .comment_auteur { float:left; font-weight:bold;}
+	.galerie_comment .comment_date { float:right; color:#69C;}
+	.galerie_comment .comment_texte { clear:both; margin-left:5%;}
+

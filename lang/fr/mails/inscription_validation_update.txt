@@ -1,0 +1,21 @@
+Subject: Ton inscription sur le site d'Unité
+
+Salut,
+
+Depuis que tu as commencé ton inscription, le webmaster a procédé à une mise à jour du site. Cette mise à jour a modifié automatiquement ta clé d'activation. L'ancienne clé est donc périmée. 
+
+Tu trouveras ci-dessous ta nouvelle clé d'activation qui te permettra de t'inscrire sur le site d'Unité ({ADRESSE_SITE}).
+
+Cette clé ne t'autorise qu'à une seule inscription et reste valide 15 jours.
+
+Clique ici pour continuer ton inscription : {URL_VALIDATION}
+
+Clé d'activation : {CLE_VALIDATION}
+
+
+A bientôt sur {ADRESSE_SITE} !
+
+Le webmaster, {WEBMASTER_PSEUDO}
+
+--
+PS : Si tu considères ce mail comme du spam, merci de le signaler en répondant à ce mail ({WEBMASTER_EMAIL}).

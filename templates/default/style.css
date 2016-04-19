@@ -1,0 +1,556 @@
+/*
+* 12/12/2005 - 22:40:00 - Scout Web Portail - v 1.1.1
+*
+* style.css v 1.1.1 - Styles du portail (feuille principale)
+* Copyright (C) 2005 ChMat
+* http://www.scoutwebportail.org
+*
+* This file is part of Scout Web Portail.
+*/
+/*
+* Modifications v 1.1.1
+*	Correction de certains styles 
+*/
+
+/* body
+**********************************************/
+/* #index permet éventuellement de donner un style différent par rapport au body */
+body { 
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size:11px; color: #000; background-color:#FFF;} 
+#index {}
+
+/* On annule les styles définis par certains navigateurs
+*************************************************************************************/
+h1, h2, h3, h4, h5, h6, pre, blockquote, input, select, td, th, textarea { font-size:11px; }
+ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, body, html, p, blockquote, fieldset, input, dl, dt, dd {
+	margin:0; padding:0 }
+a img, :link img, :visited img { border:none; }
+address { font-style:normal }
+
+/* On remet en place un certain nombre de styles
+*************************************************************************************/
+/* Cette partie de la feuille de style est sous licence Creative Commons.			*/
+p, ul, ol {margin-bottom: 1em;}
+p.petitbleu, p.petit { margin-bottom:2px;}
+
+.decale {margin-left:2em;}
+h1, h2, h3, h4 {margin-bottom:0.5em;}
+
+dl {margin: 0 0 0 1em;}
+dl dt {margin: 0 0 .5em 0; border-bottom: solid #F3F3F3 1px; padding-bottom: 0.2em;}
+dl dd+dt {margin-top: 1.2em;}
+dl dd {margin: 0 0.9em 0.9em 0.9em;}
+
+ol {list-style: decimal;}
+ol li {margin: 0 0 0 2em;}
+ol li ol {margin: 1em 0 1em 1em;}
+ol li ul {margin: 1em 0 1em 1em;}
+
+ul {list-style: disc;}
+ul li {margin: 0 0 0 2em;}
+ul li ul {margin: 0 0 0 1em; list-style: circle;}
+ul li ol {margin: 0 0 0 1em;}
+/* Fin de la partie sous licence Creative Commons 									*/
+
+ul.dir li { list-style-type:none; /* liste de dossiers */
+	padding-left:18px; background: url('../../templates/default/images/go.png') no-repeat 0px;}
+
+acronym {border-bottom:1px dotted; cursor:help;}
+label:hover { cursor:pointer; text-decoration:underline;}
+
+/* a
+**********************************************/
+:link, :link:active {color: #339;}
+:link:hover {color: #930;}
+
+/* Définition des balises de code 
+**********************************************/
+code, .code {color: #060;}
+.code {
+	border:1px #D1D7DC solid; background: url('../../templates/default/images/fond-code.png') repeat-y; 
+	width:95%; margin:auto; padding:0.2em; overflow:auto; margin-top:0.2em; margin-bottom:0.5em;}
+blockquote {
+	border-top:1px #DADADA solid; border-bottom:1px #DADADA solid; width:70%; margin:0.2em 3% 0.2em 3%; padding:7px 0.2em 15px 30px; 
+	font-style:italic; background: url('../../templates/default/images/fond_quote.png') 0 2px no-repeat;}
+	.info {margin-left:3%; padding-top:0.3em; font-weight:bold; color:#666; display:block;}
+
+/* Balises de titre 
+**********************************************/
+h1 {
+	font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px; font-weight:normal; 
+	color: #C05A27; text-indent: 2em; line-height: 1.8em; border-bottom: solid #930 1px;}
+h2, .titre2 {
+	font-size: 14px; color: #930; font-weight:bold;}
+#corps > h2, #indexg_colonne_gauche h2 { background-color: #FFF8DC; border-bottom: 1px #D19275 solid;}
+h3 {font-size:12px; color:#C05A27; font-style:italic; margin-top:1em;}
+p + h3 {margin-top:0;}
+h4, h5, h6 {font-weight:bold; color: #339;}
+hr {display:none;}
+
+/* Balises de formulaires 
+**********************************************/
+input, select, td, textarea, optgroup {font-family: Verdana, Arial, Helvetica, sans-serif; color: #666;}
+optgroup { font-style:normal; color:#339;}
+option { color:#666;}
+textarea {border:1px #C05A27 solid;}
+fieldset {margin:0.5em 10% 0.5em 10%; padding:0.5em;
+	border:1px solid #C05A27;}
+
+/* Zones de tableaux 
+**********************************************/
+th {  
+	font-weight:bold; color:#FFF; background:#E9D3C8 url('../../templates/default/images/fond_titre.png') repeat-x 50%;}
+td {color: #000;}
+
+/* Sommet du site 
+**********************************************/
+#top_page {
+	background: #FFF url('../../templates/default/images/banniere.png') no-repeat; width:100%; height:60px; padding:0px;
+	/*border-bottom:1px #930 solid;*/ text-indent:300px;}
+#top_page h1 { /* Nom du portail caché (remplace le texte de la bannière d'accueil par exemple) */
+	display:none;}
+
+/* éléments intégrés dans le menu */
+#bloc_connectes { /* Liste des membres connectés sur le portail */
+	border-top:1px #999 solid; margin-top: 0.5em;}
+	#bloc_connectes a {
+		display: inline; /* pour annuler le display:block dans #menu */}
+#logoff { /* Bouton de déconnexion utilisateur */
+	text-align:center; margin-top:0.5em;}
+
+/* Menus flottants
+**********************************************/
+/* Menu flottant avec icône */
+.menu_flottant {float:right; padding:0; margin:0.3em; border:1px #930 solid; width:260px; background-color:#FFF;}
+.menu_flottant h2 {
+	padding:0.2em; margin:0; margin-bottom:0.2em; color:#FFF; font-size:11px;
+	background:#E9D3C8 url('../../templates/default/images/fond_titre.png') repeat-x 50%;}
+.menu_flottant .icone {float:left; display:inline; margin:0.2em;}
+.menu_flottant p {float:left; max-width:180px;}
+
+/* Menu flottant sans icône */
+.panneau {float: right; border: 1px solid #BE7F5E; width: 200px; margin-left:0.5em; margin-bottom:0.5em;}
+.panneau h2, .menu_flottant h2 {
+	font-size:11px; font-weight:bold; color:#FFF; background:#E9D3C8 url('../../templates/default/images/fond_titre.png') repeat-x 50%;
+	padding:2px; padding-left:0.5em; margin-bottom:0;}
+.panneau p { padding-left:0.5em;}
+.panneau li { list-style-type:none;}
+
+
+/* Corps de la page où s'affiche le contenu
+**********************************************/
+#corps {
+	position:absolute; left:141px; top:60px; padding:0.5em; padding-top:0; background: #FFF;
+	border-top:1px #C05A27 solid;}
+	#hors-service { /* un module du portail est désactivé */
+		margin:6em 15% 6em 15%; text-align:center; padding:0.5em; border:1px #666 dotted;}
+
+/* Définition des classes du portail
+**********************************************/
+/* Lignes de tableaux alternées */
+.td-1, .td-4 {background-color: #F3F3F3; color: #666; text-decoration: none;}
+.td-2, .td-3 {background-color: #FFF; color: #666; text-decoration: none;}
+.td-1 a, .td-4 a, .td-2 a, .td-3 a { text-decoration:none; color:#666;}
+.td-1 td, .td-4 td, .td-2 td, .td-3 td { color:#666;}
+.td-4 {color: #000;}
+.td-1:hover, .td-4:hover, .td-2:hover, .td-3:hover {background-color: #DDD;}
+.td-gris { background-color:#F3F3F3;}
+
+/* Autres styles */
+.cadrenoir {border: 1px #930 solid; margin-bottom:1em;}
+.grandthstaffs { /* Intitulé de page avec icône animateur only */
+	background: url('../../templates/default/images/zone_animateur.png') no-repeat 0 50%; line-height:50px; 
+	padding-left:65px; font-size: 18px; color:#930;}
+.lienmort, .login {text-decoration: none;}
+.login {color: #FFF;}
+.lien, .menumembres, .panneau a, .menu_flottant a {text-decoration: none; color: #000;}
+.petit, .petitbleu, td.petitbleu, .petitbleu a {font-size:10px; font-family: Verdana, Arial, Helvetica, sans-serif;}
+.petitbleu, #dernier_commentaire .date {color: #69C;}
+.rmq {font-weight: bold; color: #C30;}
+.rmqbleu, dl dt, #dernier_commentaire .auteur {font-weight: bold; color: #339;}
+
+
+/* Zones d'affichage dans indexg.php (page d'accueil du portail)
+**********************************************/
+#dernier_commentaire, #dernieres_news, #derniers_messages_forum, #deviens_membre, #abonnement_newsletter {
+	margin:0.2em 0; border:1px #930 solid;}
+
+#indexg_colonne_gauche { /* édito, dernier commentaire, suggestion de s'inscrire sur le portail, abonnement newsletter */
+	width:70%; float:left;}
+	#deviens_membre h2, #abonnement_newsletter h2, #dernieres_news h2, #dernier_commentaire h2,
+		#dernieres_news h2, #derniers_messages_forum h2 {
+		padding:0.2em; margin:0; margin-bottom:5px; color:#FFF; font-size:11px;
+		background:#E9D3C8 url('../../templates/default/images/fond_titre.png') repeat-x 50%;}
+		#dernier_commentaire p { margin-left:10px;}
+		#dernier_commentaire .photo { margin-right:5px; padding:2px; border:1px solid #D19275; /* #FFF8DC */ float:left;}
+		#dernier_commentaire .date { font-size:10px; clear:left; margin:0 0.5em 2px 0;}
+	#deviens_membre, #abonnement_newsletter {margin-top:0.5em; border:1px #930 solid;}
+#indexg_colonne_droite { /* dernières news, derniers messages forum */
+	width:29%; float:right;}
+	#dernieres_news .item_news, #dernieres_news .first_news {}
+		#dernieres_news h3 { padding-left:5px; border-bottom:1px solid #930; font-size:11px; margin-top:2px; margin-bottom:2px;}
+		#dernieres_news p { margin-bottom:0; padding:0 5px;}
+		#dernieres_news p.auteur_news a {text-decoration: none;}
+		#dernieres_news .auteur_news { text-align:right; font-size:10px; padding-right:2px;}
+	#derniers_messages_forum { padding-bottom:0.2em;}
+		#derniers_messages_forum table { width:99%;}
+
+/* Forums
+**********************************************/
+/* Le forum est contenu dans une div id="forum" */
+#forum h2 { 
+	font-family:Georgia, "Times New Roman", Times, serif; font-size:16px;}
+#forum h2 a { text-decoration:none;}
+
+/* liste des forums */
+#forum table.f_liste_forums { width:100%; margin-top:5px; margin-bottom:1em; border:2px solid #930; clear:right;}
+#forum .f_liste_forums tr {background:#D2B48C;}
+#forum td.f_titre {	padding-left:45px; padding-bottom:5px; height:60px;}
+
+/* Icône correspondant au niveau d'accès minimum du forum */
+#forum td.f_0 {background:#FFF url('../../templates/default/forum/forum0.png') no-repeat 0 25%;}
+#forum td.f_1 {background:#FFF url('../../templates/default/forum/forum1.png') no-repeat 0 25%;}
+#forum td.f_2 {background:#FFF url('../../templates/default/forum/forum2.png') no-repeat 0 25%;}
+#forum td.f_3 {background:#FFF url('../../templates/default/forum/forum3.png') no-repeat 0 25%;}
+#forum td.f_4 {background:#FFF url('../../templates/default/forum/forum4.png') no-repeat 0 25%;}
+#forum td.f_5 {background:#FFF url('../../templates/default/forum/forum5.png') no-repeat 0 25%;}
+
+#forum td.f_titre h3 { margin-top:0;}
+#forum td.f_titre h3 a { text-decoration:none; font-style:normal; font-weight:bold; font-family:Georgia, "Times New Roman", Times, serif; }
+#forum td.f_titre h3 a:hover { text-decoration:underline;}
+#forum td.f_outils_forum a { text-decoration:none;}
+
+/* liste des discussions */
+#forum table.f_liste_fils { width:100%; margin-bottom:1em; border:2px solid #930; clear:right;}
+#forum .f_liste_fils tr {background:#FFF url('../../templates/default/forum/fond_liste_fils.png') repeat-y right; }
+#forum .f_liste_fils tr:hover {background:#FFF url('../../templates/default/forum/fond_liste_fils2.png') repeat-y right; }
+#forum td.f_titre_fil { padding-left:5px;}
+#forum td.f_titre_fil span.fil_pg { margin-left:10px; font-size:10px;}
+#forum a.f_titre_fil { text-decoration:none; font-weight:bold; color:#930;}
+#forum a.f_titre_fil:hover { text-decoration:underline;}
+
+/* Recherche */
+.f_recherche { text-align:right; padding-top:5px; float:right;}
+
+/* Pagination */
+.f_pagination { font-weight:bold; font-size:10px; text-align:right; padding-top:5px; clear:right; float:right; margin-bottom:5px;}
+	.f_pagination a { text-decoration:none;}
+	.f_pagination a:hover { text-decoration:underline;}
+
+/* Droits du forum */
+.f_droits { font-size:10px; text-align:right;}
+
+/* Boutons du forum */
+.f_poster p, .f_nouveau p, .f_recherche { margin:0.2em 0;}
+
+/* Discussion */
+.fil, .post_message {
+	border: 2px solid #930; padding: 0.2em; background-color:#FAFAFA; clear:right;}
+.post {}
+.post_banni, .titre_banni {background-color:#D19275; color:#000;}
+.post_banni h2 {text-decoration: line-through;}
+.modo {text-align:right; color:#FFD700; font-weight:bold; font-style:italic; padding-right:0.5em;}
+.post .modo {color:#666;}
+.infos_posteur {float:left; width:18%; text-align:center;}
+	.pseudo { /* le pseudo du posteur */
+		margin-bottom:0; font-weight:bold;}
+	.avatar {}
+	.statut {color:#69C; font-size:10px;}
+#forum .message {
+	float:left; min-height:120px; width:80%; border-left: 1px #666 solid; padding:0.2em; padding-left:0.5em;}
+#forum .post .message {border: 1px #F3F3F3 solid; border-right:0; background-color:#FFF; margin-bottom:5px;}
+.fil .infos_post {clear:left; color:#69C; text-align:right; border-bottom:1px #930 solid; padding:0.1em 0.2em 0.1em 0;}
+.last .infos_post {border-bottom:0;}
+.post_message textarea {width:95%; height:200px; margin-left:2.5%;}
+
+
+/* Pied de page
+**********************************************/
+#footer {
+	clear:both; border-top:1px #999 solid; margin-top:2em; padding: 0 0.5em; font-size:9px; color: #999;}
+	#footer a {text-decoration:none;}
+	#footer .web {float:left;}
+	#footer .maj {float:right;}
+	#footer .divers {padding-top:0.1em; clear:both; float:left;}
+	#footer .top {padding-top:0.1em; float:right; clear:right;}
+	#footer .top a {padding-left:18px; background: url('../../templates/default/images/haut.png') no-repeat 5px;}
+
+/* Page Gestion de l'unité
+**********************************************/
+#gestion_unite h2 {
+	font-weight:bold; color:#FFF; background:#E9D3C8 url('../../templates/default/images/fond_titre.png') repeat-x 50%;
+	text-align:center; font-size:12px; padding:2px 0;}
+#gestion_unite #infos_generales { background: url('../../templates/default/images/nouveautes_membres.png') no-repeat 5px 20px;
+	margin-bottom:1em; min-height:70px; border:1px #930 solid;}
+#gestion_unite .cadre_g, #gestion_unite .cadre_d { margin-bottom:1em; min-height:175px; border:1px #930 solid; width:49%;}
+#gestion_unite .cadre_g { float:left; clear:left;}
+#gestion_unite .cadre_d { float:right; clear:right;}
+#gestion_unite #gestion_membres { background: url('../../templates/default/images/gestion_membres.png') no-repeat 5px 20px;}
+#gestion_unite #gestion_section { background: url('../../templates/default/images/gestion_section.png') no-repeat 5px 20px;}
+#gestion_unite #outils_generaux { background: url('../../templates/default/images/outils_generaux.png') no-repeat 5px 20px; min-height:120px;}
+#gestion_unite #gestion_anciens { background: url('../../templates/default/images/gestion_anciens.png') no-repeat 5px 20px; min-height:120px;}
+
+#gestion_unite #infos_generales p, #gestion_unite #gestion_membres p, 
+#gestion_unite #gestion_section p, #gestion_unite #outils_generaux p, 
+#gestion_unite #gestion_anciens p { padding-left:70px; margin-bottom:0.2em;}
+
+/* Page d'accueil membres
+**********************************************/
+#membres h2 {
+	font-weight:bold; color:#FFF; background:#E9D3C8 url('../../templates/default/images/fond_titre.png') repeat-x 50%;
+	text-align:center; font-size:12px; padding:2px 0;}
+#membres #zone_infos { background: url('../../templates/default/images/message_membre.png') no-repeat bottom left;
+	margin:0.5em 0; min-height:70px; border:1px #930 solid;}
+#membres .cadre_g, #membres .cadre_d { margin-bottom:1em; min-height:175px; border:1px #930 solid; width:49%;}
+#membres .cadre_g { float:left; clear:left;}
+#membres .cadre_d { float:right; clear:right;}
+#membres #msg_membres { background: url('../../templates/default/images/espace_membre.png') no-repeat bottom left; min-height:70px;}
+#membres #m_webmaster, #membres #m_cowebmaster { background: url('../../templates/default/images/zone_webmaster.png') no-repeat 5px 20px;}
+#membres #m_gestion_unite { background: url('../../templates/default/images/gestion_unite.png') no-repeat 5px 20px; min-height:120px;}
+#membres #m_animateur { background: url('../../templates/default/images/zone_animateur.png') no-repeat 5px 20px; min-height:120px;}
+#membres #m_pages_restreintes, #membres #m_tally { clear:both;}
+
+#membres #zone_infos p, #membres #msg_membres,  #membres #m_webmaster ul, 
+#membres #m_cowebmaster p, #membres #m_gestion_unite p, #membres #m_animateur p { padding-left:70px; margin-bottom:0.2em;}
+
+#membres #m_webmaster ul { list-style-type:none; float:left;}
+
+#membres #zone_infos, #membres #msg_membres, #membres #m_webmaster, #membres #m_cowebmaster, 
+#membres #m_gestion_unite, #membres #m_animateur, #membres #m_pages_restreintes, #membres #m_tally { border:1px #930 solid; margin-bottom:1em;}
+
+
+/* Blocs standards utilisés un peu partout
+**********************************************/
+/* 
+* .introduction : description de l'outil ou des fonctions proposées sur la page
+* .action : panneau dans lequel une action utilisateur est requise
+* .msg : Message d'information/d'erreur
+* .message_info_anim : Message d'information affiché à un animateur sur une page visible au public
+* .instructions : Instructions d'utilisation d'un outil du portail
+* .bouton : Lien en forme de bouton 
+*/
+a.bouton {
+	margin-top:5px; padding:0.2em; text-decoration:none; font-weight:bold;
+	border:1px #B48152 solid; color:#B48152; -moz-border-radius:4px;}
+	a.bouton:hover {background-color:#B48152; color:#FFF;}
+
+.introduction {
+	width:80%; margin-left:10%; margin-top:1em;}
+	.introduction h2 { font-size:12px;}
+.msg, .msg_anim, .instructions, .action {
+	border:1px #B48152 solid; background-color:#FFF8DC;	-moz-border-radius:10px; color:#B48152;
+	clear:both; margin:0.5em 15% 0.5em 15%; padding:0.5em;}
+.msg a, .msg_anim a, .instructions a, .action a {color:#B48152;}
+.msg .rmqbleu, .msg_anim .rmqbleu, .instructions .rmqbleu, .action .rmqbleu {color:#930;}
+	.action h2 {color:#930;}
+	.instructions h2 {font-size:11px; font-weight: bold; color: #C30; margin-bottom:0;}
+	.instructions h3 {font-size:10px; font-weight: bold; font-style:normal; color: #69C; margin-bottom:0;}
+.form_login {}
+
+/* Zone de pagination (forum, galerie, livre d'or, ...) */
+p.pagination { text-align:center; clear:both;}
+	p.pagination .pg_pcdte { text-align:left;}
+	p.pagination .pg {}
+	p.pagination .pg_svte { text-align:right;}
+
+p.pagination_photo { text-align:center; clear:both;}
+	p.pagination_photo .photo_pcdte { }
+	p.pagination_photo .pg { }
+	p.pagination_photo .photo_svte { }
+p.retour_pg { text-align:center;}
+
+/* Panneaux de mise en forme : smileys et barre de boutons */
+div.layout_tools { /* boutons gras, italique, mail, lien, ... */
+	text-align:center;}
+div.smileys { /* les smileys clickables */
+	text-align:center; padding:5px; padding-bottom:0.2em; margin:0.5em 10%; border:1px dotted #B48152;}
+	div.smileys p.rmq {text-align:left; margin-bottom:0.2em;}
+
+/* Formulaires de configuration du portail */
+.form_config_site {
+	clear:both; margin:0.5em 10% 1em 10%; border: 1px #930 solid;}
+	.form_config_site p, .form_config_site textarea, .form_config_site ul, .form_config_site ol, .form_config_site dl {
+		margin:1em; margin-top:0.2em; width:95%; display:block;}
+	.form_config_site .layout_tools {
+		text-align:center; padding: 0.5em;}
+	.form_config_site ul {margin-bottom:1em;}
+	.form_config_site li a {text-decoration:none;}
+	.form_config_site h2 {
+		border-bottom:1px #930 solid; padding-left:0.5em; padding-bottom:0.5; margin:0; background-color:#A0522D; 
+		color:#FAFAFA; font-family:Arial;}
+	.form_config_site h3 {
+		border-bottom:1px #930 solid; padding:0 0 0.5em 0.5em; font-style:normal; font-weight:normal; 
+		background-color:#D2B48C;}
+	.form_config_site table {border-collapse:collapse; width:90%; margin:1em 5%;}
+	.form_config_site td, .form_config_site th {padding:0.2em;}
+
+/* Panneau de configuration du portail */
+.form_gestion_unite {
+	clear:both; margin:0.5em 10% 1em 10%; border: 1px #930 solid;}
+	.form_gestion_unite p, .form_gestion_unite textarea, .form_gestion_unite ul, .form_gestion_unite ol, .form_gestion_unite dl {
+		margin:1em; margin-top:0.2em; width:95%; display:block;}
+	.form_gestion_unite .layout_tools {
+		text-align:center; padding: 0.5em;}
+	.form_gestion_unite ul {margin-bottom:1em;}
+	.form_gestion_unite li a {text-decoration:none;}
+	.form_gestion_unite h2 {
+		border-bottom:1px #930 solid; padding-left:0.5em; padding-bottom:0.5; margin:0; background-color:#A0522D; 
+		color:#FAFAFA; font-family:Arial;}
+	.form_gestion_unite h3 {
+		border-bottom:1px #930 solid; padding:0 0 0.5em 0.5em; font-style:normal; font-weight:normal; 
+		background-color:#D2B48C;}
+	.form_gestion_unite table {border-collapse:collapse; width:90%; margin:1em 5%;}
+	.form_gestion_unite td, .form_gestion_unite th {padding:0.2em;}
+
+/* Eléments utilisés à un seul endroit sur le portail
+**********************************************/
+
+/* Edition des pages du site */
+.info_pgsection { /* Message d'information page vide, en cours d'édition, ... */
+	margin:0.5em 15%; padding:1em; background-color: #F3F3F3; border: 1px #C30 dotted; }
+	.info_pgsection p {	margin:5px;}
+#menu_outils_page { /* Barre d'outils pour les membres qui peuvent modifier les pages du site */
+	float:right; background-color: #FFF; margin-top:0.2em;}
+#webmaster_data { /* zone contenant les statistiques de production de la page (durée (+ nbre de requêtes sql en local))*/
+	clear:both; float:left; display:none;}
+#message_important { /* Messages importants pour le webmaster au début du #corps - site offline, ... */
+	background: url('../../templates/default/images/message_membre.png') no-repeat bottom left; min-height: 60px; 
+	padding-top:0.5em; padding-left: 65px; border-bottom: 1px #930 solid; color:#930;}
+
+textarea.sys { font-family:"Courier New", Courier, mono; font-size:12px;}
+
+/* Styles pour la page Anniversaires
+**********************************************/
+.anniversaires .jour { padding:2px; margin:10px; width:40%;}
+.anniversaires .jour p { margin-bottom:0.2em;}
+.anniversaires .jour ul { border:1px #666 solid; list-style-type:none;}
+.jour li span { color:#999;}
+.anniversaires .avant { float:right; clear:right;}
+.anniversaires .apres { float:left; clear:left;}
+
+/* Styles pour les Albums photos
+**********************************************/
+/* Galerie : Liste des albums */
+dl.liste_albums dt { 
+	clear:left; margin-top:0.5em; font-family:Georgia, "Times New Roman", Times, serif; font-size:12px; border-width:0px;}
+	.liengalerie {text-decoration: none; font-weight: bold;}
+dl.liste_albums dt.masque { margin-top:0;}
+dl.liste_albums dd { margin-left:0; padding-bottom:1em; padding-left:0.9em; border-bottom:1px solid #930;}
+	dl.liste_albums dd .infos { clear:left;}
+	a img.photo_accueil { padding:5px; background-color:#F3F3F3; border:1px solid #CCC; margin:0 5px 5px 5px;}
+	.comment_auteur {}
+	#galerie h1 { font-family:Georgia, "Times New Roman", Times, serif; font-size:18px;}
+	#galerie .intro { 
+		width:80%; margin-left:10%; margin-top:1em; margin-bottom:1em; font-style:italic;}
+		#galerie .intro p { margin-bottom:0.2em;}
+	#galerie img.miniature { margin:5px;}
+
+/* Galerie : Liste des photos sans commentaire */
+.liste_photos {
+	text-align:center; width:170px; height:170px; padding:2px; margin:2px; padding-top:10px; 
+	border:1px solid #CCC; background-color:#F3F3F3; float:left;}
+
+/* Galerie : photo en grand format */
+.galerie_photo { clear:both; text-align:center; margin:1em 0;}
+
+form.comment_post {
+	clear:both; margin:0.5em 10% 1em 10%; border: 1px #930 solid;}
+form.comment_post h2 {
+	padding:0.2em; margin:0; margin-bottom:0.2em; color:#FFF; font-size:11px;
+	background:#E9D3C8 url('../../templates/default/images/fond_titre.png') repeat-x 50%;}
+.comment_post p { padding:2px; margin:0;}
+textarea.comment_post_text { margin:1em; margin-top:0.2em; width:95%; display:block;}
+
+/* Derniers commentaires */
+#commentaires { margin:0 10%; width:80%;}
+#commentaires h2 {
+	padding:0.2em; margin:0; margin-bottom:5px; color:#FFF; font-size:11px;
+	background:#E9D3C8 url('../../templates/default/images/fond_titre.png') repeat-x 50%;}
+	.commentaire { clear:both; border:1px solid #930; margin-bottom:1em;}
+	.commentaire p { margin-left:10px;}
+	.commentaire .photo { margin-right:5px; padding:2px; border:1px solid #D19275; /* #FFF8DC */ float:left;}
+	.commentaire .date { text-align:right; color:#69C; font-size:10px; clear:left; margin:0 0.5em 2px 0;}
+
+/* Styles pour le tally
+**********************************************/
+.photo { padding:5px; background-color:#F3F3F3; border:1px solid #CCC; margin:5px;}
+
+/* Styles pour le livre d'or
+**********************************************/
+#livreor {}
+.livreor_msg, div.galerie_comment {width:80%; margin-left:10%; margin-bottom:1em;}
+	.livreor_msg p {margin-bottom:2px; padding:2px;}
+.livreor_txt { border:1px solid #D2B48C; background-color:#F3F3F3;}
+.livreor_infos {text-align:right; color:#69C;}
+
+/* Commentaires des photos dans la galerie photo */
+div.galerie_comment { border:1px solid #D2B48C;}
+	div.galerie_comment p { margin-bottom:2px; padding:2px;}
+	.galerie_comment .comment_auteur { float:left; font-weight:bold;}
+	.galerie_comment .comment_date { float:right; color:#69C;}
+	.galerie_comment .comment_texte { clear:both; margin-left:5%;}
+
+div.com_pair, div.com_impair { 
+	border:1px solid #D2B48C; margin-bottom:1em; min-height:170px; padding:2px; margin-left:10%; width:80%;}
+div.com_pair p, div.com_impair p { margin-bottom:2px;}
+	img.miniature { border:1px solid #999; background-color:#F3F3F3; padding:2px;}
+	.com_pair img.miniature { float:right;}
+	.com_impair img.miniature { float:left;}
+p.num_photo { color:#69C;}
+div.commentaire_mini { }
+	.commentaire_mini_auteur a { font-weight:bold; text-decoration:none;}
+	.commentaire_mini_texte { margin-left:25px;}
+
+/* Styles pour la page de news
+**********************************************/
+#news {}
+.news_msg { width:80%; margin-left:10%; margin-bottom:1em; border:1px solid #930; clear:both;}
+#news h2 { 
+	padding:0.2em; margin:0; margin-bottom:0.2em; color:#FFF; font-size:11px;
+	background:#E9D3C8 url('../../templates/default/images/fond_titre.png') repeat-x 50%;}
+.news_txt { padding:2px;}
+.news_infos { padding:2px; text-align:right; margin-bottom:0;}
+
+/* Styles pour les profils des utilisateurs
+**********************************************/
+#profil_user ul.infos_base { float:right; list-style-type:none;}
+	#profil_user ul.infos_plus li, #profil_user ul.infos_base li { background-color:#F3F3F3; padding:1px; margin:1px;}
+#profil_user ul.infos_plus { clear:both; list-style-type:none;}
+#profil_user .avatar { margin:10px;}
+
+/* Styles pour les fiches des membres
+**********************************************/
+#gestion_u_f_mb {}
+	#gestion_u_f_mb .photo_membre, #gestion_u_f_famille .photo_membre { 
+		float:right; padding:5px; background-color:#F3F3F3; border:1px solid #CCC; margin:0 5px 5px 5px;}
+	fieldset.ancien { border:1px dotted #C05A27;}
+
+/* Styles pour les fenêtres en popup
+**********************************************/
+.body_popup {margin:0.5em;}
+.liste_photo {border:1px #930 solid; margin-bottom:0.2em;}
+.liste_photo h2 {font-size:11px; background-color:#FFF8DC; padding:0.2em; font-weight:normal;}
+.liste_photo h2 .petitbleu {float:right; margin-bottom:0.2em;}
+.liste_photo p {clear:right; text-align:center;}
+
+/* Styles pour la page de téléchargements
+**********************************************/
+#download_liste h2 {
+	clear:right; padding-left:0.5em; background-color: #FFF8DC; border-bottom: 1px #D19275 solid;}
+#download_liste a {color:#930; text-decoration:none;}
+div.download_fichier { width:80%; margin-left:10%; clear:right; border:1px #B48152 solid; min-height:100px; margin-bottom:0.5em;}
+	div.download_fichier h3 { padding:0.2em; margin:0; margin-bottom:0.2em; color:#FFF; font-size:11px;
+		background:#E9D3C8 url('../../templates/default/images/fond_titre.png') repeat-x 50%;}
+		div.download_fichier h3 span { float:right;}
+.infos_fichier {
+	float:right; width:40%; border-left:1px #B48152 solid; background-color:#FFF8DC; color:#B48152; font-size:10px; 
+	margin-bottom:0.5em; margin-right:0.5em; padding:2px;}
+.desc_fichier {margin-left:15px; padding:2px;}
+ul.download_fichier { width:80%; margin-left:10%; border:1px #B48152 solid; margin-bottom:0.5em; list-style-type:none;}
+
+dl.rubriques { width:80%; margin-left:10%;}
+	dl.rubriques dt a { text-decoration:none; font-size:12px;}
+	dl.rubriques dd p.petitbleu { text-align:right;}
+/* Liens cliquables des en-têtes du tableau gestion membres du portail
+**********************************************/
+th.petit a { color:#FFFFFF; text-decoration:none; border-bottom:1px dotted #FFF;}

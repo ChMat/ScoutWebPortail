@@ -1,0 +1,17 @@
+Subject: Passage
+
+Salut,
+
+
+{USER_PSEUDO} vient de te confier {NBRE_NOUVEAUX} nouveaux {APPELLATION_MEMBRES}.
+Ils sont dans la liste d'attente de ta section.
+
+Les nouveaux membres sont : {LISTE_NOMS}
+Dès maintenant, tu peux les prendre en charge sur le site d'Unité ({ADRESSE_SITE}).
+
+A bientôt !
+
+Le webmaster
+
+--
+PS : Si tu considères ce mail comme du spam, merci de le signaler à cette adresse : {WEBMASTER_EMAIL}

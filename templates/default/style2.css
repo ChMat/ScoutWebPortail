@@ -1,0 +1,40 @@
+/*
+* 12/12/2005 - 22:40:00 - Scout Web Portail - v 1.1.1
+*
+* style2.css v 1.1 - Styles utilisés sur les pages d'affichage des listings membres et anciens
+* (listing_membres2.php et listing_anciens2.php)
+* Copyright (C) 2005 ChMat
+* http://www.scoutwebportail.org
+*
+* This file is part of Scout Web Portail.
+*/
+body { font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: #000 }
+a {	color: #339;}
+a:hover{color: #C30} 
+h1 {
+	font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px; font-weight:normal; 
+	color: #C05A27; text-indent: 30px; line-height: 35px; border-bottom: 1px #930 solid;}
+hr {
+	height: 1pt; color: #C30; width: 300px; text-align: center;}
+table {	border: none;}
+td {
+	font-family: Arial, Helvetica, sans-serif; font-size: 8pt; color: #000;}
+th {
+	font-size: 8pt;	font-weight: bold; color: #339;	background-color: #F3F3F3; border: 0px none #000;
+	border-bottom: 2px solid #000;}
+
+.rmq { font-weight: bold; color: #C30}
+.rmqbleu {
+	color: #339; font-weight: bold;}
+.td-1 {
+	background-color: #FFF;	color: #666; text-decoration: none;	border-bottom: 1px #999 solid;}
+.td-2 {
+	background-color: #F3F3F3; color: #000;	text-decoration: none; border-bottom: 1px #999 solid;}
+.td-3 {
+	background-color: #FFF; color: #666; text-decoration: none;	border: none;}
+.td-4 {
+	background-color: #F3F3F3; color: #000;	text-decoration: none; border: none;}
+.petit {
+	font-size: 8pt;	font-family: Verdana, Arial, Helvetica, sans-serif;}
+.petitbleu {
+	font-size: 8pt;	color: #69C; font-family: Verdana, Arial, Helvetica, sans-serif;}

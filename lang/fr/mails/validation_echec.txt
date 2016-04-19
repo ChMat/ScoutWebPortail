@@ -1,0 +1,9 @@
+<html><body>
+<p>Salut {USER_PRENOM},</p>
+<p>Désolé, mais {GARANT_PSEUDO} a invalidé ton inscription sur <a href="{ADRESSE_SITE}">le site d'Unité</a>.</p>
+<p>Nous nous basons sur la confiance mais tu as choisi un statut qui ne te correspondait pas. Ton compte est donc banni du site.<br />Tu peux cependant encore t'inscrire avec la même adresse email mais ton pseudo devra être différent.</p>
+<p>A bientôt sur {ADRESSE_SITE} !</p>
+<p>Le webmaster, {WEBMASTER_PSEUDO}</p>
+
+<p>PS : Si tu considères ce mail comme du spam, merci de le signaler en répondant à ce mail ({WEBMASTER_EMAIL}).</p>
+</body></html>

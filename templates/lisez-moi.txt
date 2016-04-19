@@ -1,0 +1,72 @@
+*****************************************************************************
+* 12/12/2005 - 22:40:00 - Scout Web Portail - v 1.1.1
+*****************************************************************************
+* Copyright (C) 2005 ChMat
+* http://www.scoutwebportail.org
+*
+* This file is part of Scout Web Portail.
+*
+* Scout Web Portail is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* Scout Web Portail is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with Scout Web Portail; if not, write to the Free Software
+* Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA.
+*/
+
+
+Dans ce dossier, tu trouveras les différents styles utilisés sur SWP.
+Le dossier default contient les styles utilisés par le portail.
+
+Actuellement, le choix des styles appliqués au portail n'est pas dynamique, 
+il utilise le dossier default uniquement. Pour créer tes styles personnalisés,
+copie le dossier default pour garder une copie de sauvegarde et adapte 
+le dossier default.
+
+Les styles sont répartis comme suit :
+
+// style.css 
+***************************/
+Feuille générale contenant l'ensemble des styles
+
+// style_ie.css 
+***************************/
+Feuille spécifique utilisée uniquement par IE pour corriger certaines erreurs
+d'interprétation de ce navigateur dans la feuille style.css générale.
+
+// style2.css 
+***************************/
+Feuille utilisée pour l'affichage des listings membres complets
+
+// style_print.css 
+***************************/
+Feuille utilisée pour la mise en page à l'impression des pages
+
+// menus/complet.css
+***************************/
+Feuille utilisée pour la mise en page du menu par défaut du portail.
+Menu complet avec unités séparées
+
+// menus/complet_melange.css
+***************************/
+Feuille utilisée pour la mise en page du menu complet mélangé, càd où les sections
+de plusieurs unités sont mélangées.
+
+// menus/progressif.css
+***************************/
+Feuille utilisée pour le menu progressif qui arrivera bientôt ;-) Il se déploiera 
+de rubrique en rubrique 
+
+
+
+Les styles sont regroupés par catégories et commentés afin de simplifier 
+les adaptations.
+
+N'hésitez pas à partager des styles que vous auriez créés pour SWP !

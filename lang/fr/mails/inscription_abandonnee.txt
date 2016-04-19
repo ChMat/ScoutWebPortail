@@ -1,0 +1,20 @@
+Subject: Abandon de ton inscription
+
+Bonjour,
+
+Le {INSCRIPTION_DATE}, tu avais commencé ton inscription sur le site d'Unité. Nous t'avions envoyé un mail contenant les instructions pour terminer ton inscription mais n'avons pas eu de nouvelles de toi sur le site depuis lors. 
+
+C'est pourquoi ton compte provisoire a été désactivé. 
+Cela signifie que tu ne peux plus activer ton compte grâce au mail que tu avais reçu.
+
+Cependant, tu peux relancer une nouvelle inscription; il te suffit d'aller sur le site et dans le menu Membres de cliquer sur Inscription.
+
+Rendez-vous donc sur {ADRESSE_SITE}.
+
+
+A bientôt,
+
+Le webmaster, {WEBMASTER_PSEUDO}
+
+--
+PS : Vous recevez ce mail suite à l'enregistrement de votre adresse email sur notre site. Si vous ne souhaitez plus recevoir d'email de notre part, n'hésitez pas à nous le faire savoir en répondant à ce mail.

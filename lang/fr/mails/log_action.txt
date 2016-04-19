@@ -1,0 +1,13 @@
+Subject: Action visiteur sur le site
+
+Salut,
+
+{USER_PSEUDO} vient de faire une action particulière sur le site.
+
+Action : {EVENT}
+
+Tu peux venir jeter un oeil sur le site {ADRESSE_SITE}.
+
+A+
+
+Le webmaster
